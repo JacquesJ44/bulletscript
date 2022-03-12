@@ -11,3 +11,7 @@ body {
 #register{
     padding-top: 17px;
 }
+
+#upcoming{
+    max-width: 100%;
+}

@@ -28,9 +28,10 @@
                 </a>
                 <h1>BULLETSCRIPT</h1>
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/BULLETSCRIPT">Facebook</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/bulletscript/">Instagram</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://open.spotify.com/artist/3SLBGghuwxcU3N8CQOHJHR">Spotify</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/BULLETSCRIPT" target="_blank">Facebook</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/bulletscript/" target="_blank">Instagram</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://open.spotify.com/artist/3SLBGghuwxcU3N8CQOHJHR" target="_blank">Spotify</a></li>
                 </ul>
                 <button type="button" class="btn btn-link">
                     <a href="store.html">Store</a>
@@ -44,12 +45,54 @@
 
         <!-- Div container with 2 columns - 1 for upcoming shows and 1 for picture and band description -->
         <div class="row">
+            <!-- Upcoming shows -->
             <div class="col-sm-4">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, odio!</p>
+                <br>
+                <h3>UPCOMING SHOWS</h3>
+                <br>
+                <img id="upcoming" src="/static/pics/daisyjones.jpeg" alt="upcoming gig">
+                <a href="https://www.facebook.com/events/987807045170593/?ref=newsfeed" target="_blank">More Info</a> 
             </div>
-            <div class="col">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, impedit.</p>
-                <img class="img-fluid" src="/static/pics/7331.jpg" alt="BULLETSCRIPT">
+            <!-- Carousel and description -->
+            <div class="col-sm-8">
+                <br>
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                    </div>
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="/static/pics/7331.jpg" alt="BulletScript" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="/static/pics/FUYD4924.jpeg" alt="BulletScript" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="/static/pics/GMAT2200.jpeg" alt="BulletScript" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/static/pics/YFVQ1559.jpeg" alt="BulletScript" class="d-block w-100">
+                        </div>
+                    </div>
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+                <p>BULLETSCRIPT is a band with a clear message - open your eyes to the world around you, and question everything,                   
+                   taking nothing, and nobody, for granted.
+
+                   The band consists of a full compliment of seasoned performers from the Cape Town metal scene. A band that enjoys pushing the envelope, placing great emphasis on solid song writing, stellar stage performance and a delivery so intense that your neck will be in a constant state of headbanging ecstasy.
+                    
+                   Combining the skills of Brett Bruton (Vocals), Jacques Hugo (Guitar), Oliver Saggerson (Guitar), JJ du Toit (Bass) and Kyle Curran (Drums), BULLETSCRIPT is ready to spread the word, take no prisoners and have a great time!</p>
             </div>
         </div>
                 
