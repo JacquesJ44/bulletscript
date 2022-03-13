@@ -1,4 +1,6 @@
-body {
+/* Elements */
+
+body{
     background-color: #000;
     color: #9da0a3;
     font-size: 1rem;
@@ -8,10 +10,26 @@ body {
     text-align: center;
 }
 
+/* ID's */
+
+/* Register link */
 #register{
     padding-top: 17px;
 }
 
+/* Upcoming shows image */
 #upcoming{
     max-width: 100%;
+}
+
+/* Classes */
+
+/* Social media icons */
+.fa{
+    color: grey;
+    padding: 20px;
+    font-size: 36px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
 }
