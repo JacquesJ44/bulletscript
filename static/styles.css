@@ -20,6 +20,22 @@ body{
 /* Upcoming shows image */
 #upcoming{
     max-width: 100%;
+    padding-left: 5px;
+}
+
+#demo{
+    padding-right: 5px;
+}
+
+/* #merch{
+    max-width: 100%;
+    padding: 10px;
+} */
+
+#viewbutton{
+    color: rgb(155, 31, 31);
+    display: inline-block;
+    margin: 25px 10px;
 }
 
 /* Classes */
@@ -33,3 +49,5 @@ body{
     text-align: center;
     text-decoration: none;
 }
+
+
