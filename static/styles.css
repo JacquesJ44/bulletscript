@@ -12,27 +12,25 @@ body{
 
 /* ID's */
 
-/* Register link */
-#register{
-    padding-top: 17px;
-}
-
-/* Upcoming shows image */
 #upcoming{
     max-width: 100%;
-    padding-left: 5px;
 }
 
-#demo{
-    padding-right: 5px;
-}
-
-/* #merch{
+#smerch{
     max-width: 100%;
-    padding: 10px;
-} */
+}
+
+#merch{
+    max-width: 100%;
+}
 
 #viewbutton{
+    color: rgb(155, 31, 31);
+    display: inline-block;
+    margin: 25px 10px;
+}
+
+#submitbutton{
     color: rgb(155, 31, 31);
     display: inline-block;
     margin: 25px 10px;
@@ -50,4 +48,13 @@ body{
     text-decoration: none;
 }
 
+.carousel-inner {
+    width:1300px;
+    height:600px;
+  }
 
+  .row > div {
+    padding: 20px;
+    /* background-color: aqua; */
+    border: 2px solid black;
+}
