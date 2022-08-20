@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Metadata for site -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <!-- https://getbootstrap.com/docs/5.1/ -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="/static/styles.css" rel="stylesheet">
+
+    <title>BULLETSCRIPT</title>
+
+</head>
+
+<body>
+
+    <!-- Nav container with logo, name, social media links, link to merch page and sign in/register button -->
+    <nav class="navbar navbar-expand-sm  navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="/static/pics/logo.png" alt="logo" style="width:40px;">
+            </a>
+            <h1>BULLETSCRIPT</h1>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <!-- Facebook-->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <!-- <li class="nav-link"> -->
+                        <a class="nav-link fa fa-facebook" href="https://www.facebook.com/BULLETSCRIPT"
+                            target="_blank"></a>
+                        <!-- </li>  -->
+                    </li>
+
+                    <!-- Instagram -->
+                    <li class="nav-item">
+                        <!-- <li class="nav-link"> -->
+                        <a class="nav-link fa fa-instagram" href="https://www.instagram.com/bulletscript"
+                            target="_blank"></a>
+                        <!-- </li> -->
+                    </li>
+
+                    <!-- Spotify -->
+                    <li class="nav-item">
+                        <!-- <li class="nav-link"> -->
+                        <a class="nav-link fa fa-spotify" href="https://open.spotify.com/artist/3SLBGghuwxcU3N8CQOHJHR"
+                            target="_blank"></a>
+                        <!-- </li> -->
+                    </li>
+
+                    <!-- Bandcamp -->
+                    <li class="nav-item">
+                        <!-- <li class="nav-link"> -->
+                        <a class="nav-link fa fa-bandcamp" href="https://bulletscript.bandcamp.com/"
+                            target="_blank"></a>
+                        <!-- </li> -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End nav container -->
+
+    <!-- Carousel and description -->
+    <br><br>
+    <div class="container-sm pt-5">
+        <div class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            </div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/pics/1.jpg" alt="BulletScript" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/pics/2.jpg" alt="BulletScript" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/pics/3.jpg" alt="BulletScript" class="d-block w-100 rounded">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/pics/4.jpg" alt="BulletScript" class="d-block w-100 rounded">
+                </div>
+            </div>
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <p>BULLETSCRIPT is a band with a clear message - open your eyes to the world around you, and question
+            everything,
+            taking nothing, and nobody, for granted.
+
+            The band consists of a full compliment of seasoned performers from the Cape Town metal scene. A band that
+            enjoys pushing the envelope, placing great emphasis on solid song writing, stellar stage performance and a
+            delivery so intense that your neck will be in a constant state of headbanging ecstasy.
+
+            Combining the skills of Brett Bruton (Vocals), Jacques Hugo (Guitar), Oliver Saggerson (Guitar), JJ du Toit
+            (Bass) and Kyle Curran (Drums), BULLETSCRIPT is ready to spread the word, take no prisoners and have a great
+            time!</p>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- Merch Store -->
+            <div class="col-lg-4 col-md-12">
+                <h3>MERCH</h3>
+                <img id="merch" src="/static/pics/merch.png" alt="merch">
+                <a href="store.html" type="button" class="btn btn-outline-dark btn-lg" id="viewbutton">Store</a>
+            </div>
+            <!-- Spotify player -->
+            <div class="col-lg-4 col-md-12">
+                <h3>LISTEN</h3>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/3SLBGghuwxcU3N8CQOHJHR?utm_source=generator" width="100%"
+                    height="380" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+            <!-- Upcoming shows -->
+            <div class="col-lg-4 col-md-12">
+                <h3>UPCOMING SHOWS</h3>
+                <img id="upcoming" src="/static/pics/daisyjones.jpeg" alt="upcoming gig">
+                <a href="https://www.facebook.com/events/987807045170593/?ref=newsfeed" target="_blank">More Info</a>
+                <br><br><br><br><br>
+                <!-- <h3>Contact Us</h3> -->
+                    <form action="/", method="post">
+                        <!-- <div class="mb-3 mt-3">
+                            <input class="form-control" type="text" id="name" placeholder="Name" name="name">
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <input class="form-control" type="text" id="surname" placeholder="Surname" name="surname">
+                        </div> -->
+                        <div class="mb-3 mt-3">
+                            <input class="form-control" type="email" id="email" placeholder="Email" name="email">
+                        </div>
+                        <!-- <div class="mb-3 mt-3">
+                            <textarea class="form-control" rows="5" id="textarea" placeholder="Write something here" name="textarea"></textarea>
+                        </div> -->
+                        <button type="submit" class="btn btn-outline-dark btn-lg" id="submitbutton">Submit</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Merch section -->
+
+    <!-- <div class="container">
+            <div class="row">
+                
+            </div>
+        </div> -->
+
+    <!-- <div class="row">
+            <div class="col">
+                <img class="img-fluid rounded" id="merch" src="/static/merch/BS Goat Long Sleeve.JPG" alt="Long Sleeve Goat">
+                <button type="button" class="btn btn-outline-dark btn-lg" id="viewbutton">View</button>
+                <img class="img-fluid rounded" id="merch" src="/static/merch/Knotted.JPG" alt="Knotted">
+                <button type="button" class="btn btn-outline-dark btn-lg" id="viewbutton">View</button>
+            </div>
+            <div class="col">
+                <img class="img-fluid rounded" id="merch" src="/static/merch/BS Goat.JPG" alt="Goat">
+                <button type="button" class="btn btn-outline-dark btn-lg" id="viewbutton">View</button>
+                <img class="img-fluid rounded" id="merch" src="/static/merch/Enemy Limited Edition.JPG" alt="Enemy Lim Ed">
+                <button type="button" class="btn btn-outline-dark btn-lg" id="viewbutton">View</button>
+            </div>
+            <div class="col">
+                <img class="img-fluid rounded" id="merch" src="/static/merch/BS Logo Green.JPG" alt="Green Logo">
+                <button type="button" class="btn btn-outline-dark btn-lg" id="viewbutton">View</button>
+                <img class="img-fluid rounded" id="merch" src="/static/merch/Knotted EP.JPG" alt="Knotted EP">
+                <button type="button" class="btn btn-outline-dark btn-lg" id="viewbutton">View</button>
+            </div>
+            <div class="col">
+                <img class="img-fluid rounded" id="merch" src="/static/merch/Enemy EP.JPG" alt="Enemy EP">
+                <button type="button" class="btn btn-outline-dark btn-lg" id="viewbutton">View</button>
+            </div>
+          </div>   -->
+</body>
+
+</html>

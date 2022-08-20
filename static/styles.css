@@ -1,0 +1,60 @@
+/* Elements */
+
+body{
+    background-color: #000;
+    color: #9da0a3;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+/* ID's */
+
+#upcoming{
+    max-width: 100%;
+}
+
+#smerch{
+    max-width: 100%;
+}
+
+#merch{
+    max-width: 100%;
+}
+
+#viewbutton{
+    color: rgb(155, 31, 31);
+    display: inline-block;
+    margin: 25px 10px;
+}
+
+#submitbutton{
+    color: rgb(155, 31, 31);
+    display: inline-block;
+    margin: 25px 10px;
+}
+
+/* Classes */
+
+/* Social media icons */
+.fa{
+    color: grey;
+    padding: 20px;
+    font-size: 36px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.carousel-inner {
+    width:1300px;
+    height:600px;
+  }
+
+  .row > div {
+    padding: 20px;
+    /* background-color: aqua; */
+    border: 2px solid black;
+}
