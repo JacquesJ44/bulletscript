@@ -17,6 +17,7 @@ body{
 }
 
 #smerch{
+    padding-top: 20px;
     max-width: 100%;
 }
 
@@ -24,7 +25,11 @@ body{
     max-width: 100%;
 }
 
-#viewbutton{
+#smerch:hover {
+    transform: scale(1.5);
+    }
+
+#storebutton{
     color: rgb(155, 31, 31);
     display: inline-block;
     margin: 25px 10px;
@@ -32,28 +37,28 @@ body{
 
 #submitbutton{
     color: rgb(155, 31, 31);
-    display: inline-block;
-    margin: 25px 10px;
 }
 
 /* Classes */
 
 /* Social media icons */
-.fa{
-    color: grey;
-    padding: 20px;
-    font-size: 36px;
-    width: 50px;
+/* .nav-link{
+    color: rgb(155, 31, 31);
+    padding: 5px;
+    font-size: 15px;
     text-align: center;
     text-decoration: none;
+} */
+.navbar-nav{
+    margin-right: 10px;
+    color: rgb(155, 31, 31);
 }
 
 .carousel-inner {
-    width:1300px;
-    height:600px;
+    max-width: 100%;
   }
 
-  .row > div {
+.row > div {
     padding: 20px;
     /* background-color: aqua; */
     border: 2px solid black;
