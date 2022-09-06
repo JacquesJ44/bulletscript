@@ -4,9 +4,10 @@
 
 <head>
 
-    <!-- Metadata for site -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- https://getbootstrap.com/docs/5.1/ -->
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
@@ -24,11 +25,11 @@
 </head>
 
 <body>
-
+    
     <!-- Nav container with logo, name, social media links, link to merch page and subscribe button -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: black;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="/">
                 <img src="/static/pics/logo.png" alt="logo" style="width:40px;">
             </a>
             <h1>BULLETSCRIPT</h1>
@@ -48,27 +49,35 @@
                         <li class="nav-item">
                             <a class="nav-link fa fa-instagram" href="https://www.instagram.com/bulletscript" target="_blank"></a>
                         </li>
-
+                        
                         <!-- Spotify -->
                         <li class="nav-item">
                             <a class="nav-link fa fa-spotify" href="https://open.spotify.com/artist/3SLBGghuwxcU3N8CQOHJHR" target="_blank"></a>
                         </li>
-
+                        
                         <!-- Bandcamp -->
                         <li class="nav-item">
                             <a class="nav-link fa fa-bandcamp" href="https://bulletscript.bandcamp.com/" target="_blank"></a>
                         </li>
                     </ul>
-                    <form class="d-flex borderf">
-                        <input class="form-control me-2" type="email" placeholder="Email" aria-label="Search">
+                    <form action="/" method="post" class="d-flex">
+                        <input class="form-control me-2" type="email" placeholder="Email" name="email" aria-label="Email">
                         <button type="submit" class="btn btn-outline-dark" id="submitbutton">Subscribe</button>
                     </form>
+                </div>
+                <div class="flashmessage">
+                    {% with messages = get_flashed_messages() %}
+                        {%if messages %}
+                            {% for msg in messages %}
+                                <p>{{msg}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
                 </div>
             </div>
         </div>
     </nav>
     <!-- End nav container -->
-
     <!-- Carousel and description -->
     <br><br>
     <div class="container pt-5">
@@ -106,23 +115,23 @@
         <p>BULLETSCRIPT is a band with a clear message - open your eyes to the world around you, and question
             everything,
             taking nothing, and nobody, for granted.
-
+            
             The band consists of a full compliment of seasoned performers from the Cape Town metal scene. A band that
             enjoys pushing the envelope, placing great emphasis on solid song writing, stellar stage performance and a
             delivery so intense that your neck will be in a constant state of headbanging ecstasy.
-
+            
             Combining the skills of Brett Bruton (Vocals), Jacques Hugo (Guitar), Oliver Saggerson (Guitar), JJ du Toit
             (Bass) and Kyle Curran (Drums), BULLETSCRIPT is ready to spread the word, take no prisoners and have a great
             time!</p>
-    </div>
-
+        </div>
+        
     <div class="container">
         <div class="row">
             <!-- Merch Store -->
             <div class="col-lg-4 col-md-12">
                 <h3>MERCH</h3>
                 <img id="merch" src="/static/pics/merch.png" alt="merch">
-                <a href="store.html" type="button" class="btn btn-outline-dark btn-lg" id="storebutton">Store</a>
+                <a href="/store" type="button" class="btn btn-outline-dark btn-lg" id="storebutton">Store</a>
             </div>
             <!-- Spotify player -->
             <div class="col-lg-4 col-md-12">
