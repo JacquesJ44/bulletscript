@@ -1,18 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from app import app
+
+from flask import render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
 from datetime import datetime
-from decouple import config
 
-#Create an instance of the Flask app
-app = Flask(__name__)
-
-#Configuring the Flask application
-app.config["TEMPLATES_AUTO_RELOAD"] = True
-app.config["SQLALCHEMY_DATABASE_URI"] = config('DATABASE_URL')
-app.config['SECRET_KEY'] = config('SECRET_KEY')
-
-#Creating an instance of the SQLAlchemy module to create a class 
+#Creating an instance of the SQLAlchemy module to create a class fal
 db = SQLAlchemy(app)
 
 #Creating a class sub_email - this is the table of the db
@@ -21,17 +14,10 @@ class sub_email(db.Model):
     email = db.Column(db.String(30))
     date_joined = db.Column(db.DateTime)
 
-# Configure email server parameters
-# app.config['MAIL_DEFAULT_SENDER']=config('EMAIL_DEFAULT_SENDER')
-app.config['MAIL_SERVER']=config('EMAIL_HOST')
-app.config['MAIL_PORT']=config('EMAIL_PORT')
-app.config['MAIL_USERNAME']=config('EMAIL_HOST_USER')
-app.config['MAIL_PASSWORD']=config('EMAIL_HOST_PASSWORD')
-# app.config['MAIL_USE_TLS']=config('EMAIL_USE_TLS')
-app.config['MAIL_USE_SSL']=config('EMAIL_USE_SSL')
-
 # Create an instance of the Mail class
 mail = Mail(app)
+
+print(app.config)
 
 #Display '/' route with GET; save email to database and forward welcome mail on POST
 @app.route("/", methods=["GET", "POST"])
@@ -69,7 +55,3 @@ def getform():
 @app.route("/store")
 def store():
     return render_template('store.html')
-
-
-if __name__ == "__main__":
-    app.run(config('DEBUG'))
