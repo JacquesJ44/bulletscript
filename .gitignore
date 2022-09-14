@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Databases
-email.db
+# Ignore the default SQLite database.
+/db/*.sqlite3
