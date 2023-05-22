@@ -3,3 +3,4 @@ flask-sqlalchemy
 flask-mail
 datetime
 python-dotenv
+flask-session

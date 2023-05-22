@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<br><br><br><br>
+    <div class="container">
+        <p>BULLETSCRIPT MERCH <span>
+                <button type="button" class="btn btn-link">
+                    <a href="/store">back</a>
+                </button>
+                <button type="button" class="btn btn-link" style="float: right">
+                    <a href="/cart">View Cart</a>
+                </button>
+            </span>
+        </p>
+    </div>
+
+<div class="container my-5">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6">
+                {% if stockitem[0]['code'] == 'GOATLS' %}
+                    <img class="img-fluid" src="/static/merch/BS Goat Long Sleeve.JPG" alt="Long Sleeve Goat">
+                {% elif stockitem[0]['code'] == 'KNOT01' %}
+                    <img class="img-fluid" src="/static/merch/Knotted.JPG" alt="Long Sleeve Goat">
+                {% elif stockitem[0]['code'] == 'GOATSS' %}
+                    <img class="img-fluid" src="/static/merch/BS Goat.JPG" alt="Long Sleeve Goat">
+                {% elif stockitem[0]['code'] == 'ENELIM' %}
+                    <img class="img-fluid" src="/static/merch/Enemy Limited Edition.JPG" alt="Long Sleeve Goat">
+                {% elif stockitem[0]['code'] == 'LOGOGR' %}
+                    <img class="img-fluid" src="/static/merch/BS Logo Green.JPG" alt="Long Sleeve Goat">
+                {% elif stockitem[0]['code'] == 'EPKN' %}
+                    <img class="img-fluid" src="/static/merch/Knotted EP.JPG" alt="Long Sleeve Goat">
+                {% elif stockitem[0]['code'] == 'EPEN' %}
+                    <img class="img-fluid" src="/static/merch/Enemy EP.JPG" alt="Long Sleeve Goat">
+                {% endif %}
+            </div>
+            <div class="col-lg-6 col-sm-6">
+                <p>PRICE: {{ stockitem[0]['price'] | zar }}</p>
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Stock ID</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Available</th>
+                            <th scope="col">ORDER HERE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in stockitem %}
+                        <tr>
+                            <th scope="row">{{ i['id'] }}</th>
+                            <td>{{ i['description'] }}</td>
+                            <td>{{ i['count'] }}</td>
+                            <td>
+                                <form action="/cart" method="post">
+                                    <input type="hidden" name="stockid" value="{{ i['id'] }}">
+                                    <input type="number" min="1" max="{{ i['count'] }}" name="order">
+                                    <button type="submit" class="btn btn-outline-dark" id="cartbutton">Add to Cart</a>
+                                </form>
+                            </td>    
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

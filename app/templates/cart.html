@@ -1,0 +1,59 @@
+{% extends "layout.html" %} 
+
+{% block body %}
+<br><br><br><br>
+    <div class="container">
+        <p>BULLETSCRIPT MERCH <span>
+                <button type="button" class="btn btn-link">
+                    <a href="/store">CONTINUE SHOPPING</a>
+                </button>
+            </span>
+        </p>
+    </div>
+
+    <div class="col-lg-6 col-sm-6">
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Stock ID</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">QTY</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in session['cart'] %}
+                    <tr>
+                        <th scope="row">{{ i['id'] }}</th>
+                        <td>{{ i['description'] }}</td>
+                        <td>{{ i['qty'] }}</td>
+                        <td>{{ i['price'] | zar }}</td>
+                        <td>{{ i['total'] | zar }}</td>
+                        <td>{{ session['cart'].index(i) }}</td>
+                        <td>
+                            <form action="/delcartitem" method="post">
+                                <input type="hidden" name="lineitem" value="{{ session['cart'].index(i) }}">
+                                <button type="submit" class="btn-close btn-close-white" aria-label="Close"></button>
+                            </form>
+                        </td>    
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <th scope="row" colspan="4">TOTAL: </th>
+                    <td colspan="1">{{ subtotal | zar }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="color: rgb(155, 31, 31)">
+            PLEASE NOTE: 
+                - TOTAL EXCLUDES DELIVERY FEE
+                - Delivery fees are usually between R100-R300 depending on delivery location
+                - We will contact you upon receiving your order and quote accordingly
+                - Collections in Cape Town CBD only 
+        </p>
+        <form action="/confirm" method="post">
+            <button type="submit" class="btn btn-outline-dark" id="confirmbutton">Confirm Order</a>
+        </form>
+    </div>
+{% endblock %}

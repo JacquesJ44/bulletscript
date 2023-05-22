@@ -11,7 +11,11 @@ load_dotenv(os.path.join(basedir, '.env'))
 class Config(object):
     # Base config
     SECRET_KEY = os.urandom(12).hex()
+    # Session config
     # SESSION_COOKIE_NAME = environ.get('SESSION_COOKIE_NAME')
+    SESSION_PERMANENT = False
+    SESSION_TYPE = 'filesystem'
+    # Folder and template config
     STATIC_FOLDER = 'static'
     TEMPLATES_FOLDER = 'templates'
     TEMPLATES_AUTO_RELOAD = True
@@ -25,4 +29,5 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     # Testing - mails will not send if set to true
-    TESTING = True
+    TESTING = False
+    DEBUG = True
